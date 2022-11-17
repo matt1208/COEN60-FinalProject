@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Find Teammates</title>
 </head>
+
 <body>
     <a href="index.html">Industry Project Hub</a>
+    <br>
     <button onclick="">Find Teammates</button>
-    
+    <!--form to submit personal information-->
+    <div>
+        <form onsubmit="formSubmit()" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major"><br><br>
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year"><br><br>
+            <label for="skills">Skills:</label>
+            <!--multiple selection drop down menu to select skills-->
+            <select id="skills" name="skills" class = "skills" multiple="multiple">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="c">C</option>
+                <option value="c++">C++</option>
+                <option value="c#">C#</option>
+                <option value="php">PHP</option>
+                <option value="sql">SQL</option>
+                <option value="ruby">Ruby</option>
+                <option value="swift">Swift</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="go">Go</option>
+                <option value="r">R</option>
+                <option value="visualbasic">Visual Basic</option>
+                <option value="powershell">PowerShell</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        <p>You selected</p>
+        <ul id="selectedSkills"></ul>
+
+    </div>
+    <div>
+        <p>Teammate Suggestions</p>
+        <p id="suggestions"></p>
+
+    </div>
+
 </html>
