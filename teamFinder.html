@@ -3,15 +3,16 @@
 
 <head>
     <title>Find Teammates</title>
+    <link rel="stylesheet" href="teamFinder.css">
 </head>
 
 <body>
     <a href="index.html">Industry Project Hub</a>
     <br>
-    <button onclick="">Find Teammates</button>
+    <button id="formButton" onclick="showForm()">Find Teammates</button>
     <!--form to submit personal information-->
-    <div>
-        <form onsubmit="formSubmit()" method="post">
+    <div id="form">
+        <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name"><br><br>
             <label for="email">Email:</label>
@@ -21,39 +22,71 @@
             <label for="year">Year:</label>
             <input type="text" id="year" name="year"><br><br>
             <label for="skills">Skills:</label>
-            <!--multiple selection drop down menu to select skills-->
-            <select id="skills" name="skills" class = "skills" multiple="multiple">
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="javascript">JavaScript</option>
-                <option value="python">Python</option>
-                <option value="java">Java</option>
-                <option value="c">C</option>
-                <option value="c++">C++</option>
-                <option value="c#">C#</option>
-                <option value="php">PHP</option>
-                <option value="sql">SQL</option>
-                <option value="ruby">Ruby</option>
-                <option value="swift">Swift</option>
-                <option value="kotlin">Kotlin</option>
-                <option value="go">Go</option>
-                <option value="r">R</option>
-                <option value="visualbasic">Visual Basic</option>
-                <option value="powershell">PowerShell</option>
-                <option value="other">Other</option>
-            </select><br><br>
-            <input type="submit" value="Submit">
-        </form>
+        </div>
+        <!--multiple selection drop down menu to select skills-->
+        <div>
+            <input type="checkbox" value="html">
+            <label for="html">HTML</label>
+        </div>
+        <div>
+            <input type="checkbox" value="css">
+            <label for="css">CSS</label>
+        </div>
+        <div>
+            <input type="checkbox" value="javascript" />
+            <label for="javascript">JavaScript</label>
+        </div>
+        <div>
+            <input type="checkbox" value="python" />
+            <label for="python">Python</label>
+        </div>
+        <div>
+            <input type="checkbox" value="java" />
+            <label for="java">Java</label>
+        </div>
+        <div>
+            <input type="checkbox" value="c" />
+            <label for="c">C</label>
+        </div>
+        <div>
+            <input type="checkbox" value="c++" />
+            <label for="c++">C++</label>
+        </div>
+        <div>
+            <input type="checkbox" value="php" />
+            <label for="php">PHP</label>
+        </div>
+        <div>
+            <input type="checkbox" value="typescript" />
+            <label for="typescript">TypeScript</label>
+        </div>
+        <div>
+            <input type="checkbox" id="other" onchange="checkOthers()" />
+            <label for="other">Other</label>
+            <input type="text" id="otherText" name="otherText" style="display:none" />
+        </div>
+        <button onclick="formSubmit()">Submit</button>
     </div>
+    <br>
     <div>
-        <p>You selected</p>
+        <h3>Your input</h3>
+        <p id="nameOutput"></p>
+        <p id="emailOutput"></p>
+        <p id="majorOutput"></p>
+        <p id="yearOutput"></p>
+        <p id="skillsOutput"></p>
+
         <ul id="selectedSkills"></ul>
 
     </div>
     <div>
-        <p>Teammate Suggestions</p>
+        <h3>Teammate Suggestions</h3>
         <p id="suggestions"></p>
 
     </div>
+    <script src="teamFinder.js">
+
+    </script>
+</body>
 
 </html>
