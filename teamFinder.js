@@ -1,3 +1,4 @@
+var skillsOutput = document.getElementById("selectedSkills");
 
 function checkOthers(){
     if(document.getElementById("other").checked){
@@ -20,18 +21,40 @@ function formSubmit() {
     var emailOutput = document.getElementById("emailOutput");
     var majorOutput = document.getElementById("majorOutput");
     var yearOutput = document.getElementById("yearOutput");
-    //get the values from 
 
     nameOutput.innerHTML = "Name: " + name;
     emailOutput.innerHTML = "Email: " + email;
     majorOutput.innerHTML = "Major: " + major;
     yearOutput.innerHTML = "Year: " + year;
     suggestions.innerHTML = "Suggestions: ";
-    skillsOutput.innerHTML = "Skills: ";
+    document.getElementById("selectedSkills").style.display="block";
+    skillsOutput.innerHTML = "Skills: "+ skillsOutput;
 
 }
 
 function showForm(){
     document.getElementById("form").style.display = "block";
     document.getElementById("formButton").style.display = "none";
+}
+
+function addSkill(skill){
+    
+
+    if(document.getElementById(skill).checked){
+        skillsOutput += skill + ", ";
+    }
+    else{
+        skillsOutput = skillsOutput.replace(skill + ", ", "");
+    }
+    //only show the skills if there are any
+    if(skillsOutput.innerHTML == "Skills: "){
+        document.getElementById("selectedSkills").style.display="none";
+    }
+    else{
+        document.getElementById("selectedSkills").style.display="block";
+    }
+
+    //only update innerHTML when the form is submitted
+    
+
 }

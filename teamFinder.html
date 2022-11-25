@@ -25,45 +25,45 @@
         </div>
         <!--multiple selection drop down menu to select skills-->
         <div>
-            <input type="checkbox" value="html">
+            <input type="checkbox" id="html" onchange="addSkill(id)"/>
             <label for="html">HTML</label>
         </div>
         <div>
-            <input type="checkbox" value="css">
+            <input type="checkbox" id="css" onchange="addSkill(id)"/>
             <label for="css">CSS</label>
         </div>
         <div>
-            <input type="checkbox" value="javascript" />
+            <input type="checkbox" id="javascript" onchange="addSkill(id)"/>
             <label for="javascript">JavaScript</label>
         </div>
         <div>
-            <input type="checkbox" value="python" />
+            <input type="checkbox" id="python" onchange="addSkill(id)"/>
             <label for="python">Python</label>
         </div>
         <div>
-            <input type="checkbox" value="java" />
+            <input type="checkbox" id="java" onchange="addSkill(id)"/>
             <label for="java">Java</label>
         </div>
         <div>
-            <input type="checkbox" value="c" />
+            <input type="checkbox" id="c" onchange="addSkill(id)"/>
             <label for="c">C</label>
         </div>
         <div>
-            <input type="checkbox" value="c++" />
+            <input type="checkbox" id="c++" onchange="addSkill(id)"/>
             <label for="c++">C++</label>
         </div>
         <div>
-            <input type="checkbox" value="php" />
+            <input type="checkbox" id="php" onchange="addSkill(id)"/>
             <label for="php">PHP</label>
         </div>
         <div>
-            <input type="checkbox" value="typescript" />
+            <input type="checkbox" id="typescript" onchange="addSkill(id)"/>
             <label for="typescript">TypeScript</label>
         </div>
         <div>
             <input type="checkbox" id="other" onchange="checkOthers()" />
             <label for="other">Other</label>
-            <input type="text" id="otherText" name="otherText" style="display:none" />
+            <input type="text" id="otherText" name="otherText" style="display:none" value="enter values separated by commas"/>
         </div>
         <button onclick="formSubmit()">Submit</button>
     </div>
@@ -75,9 +75,7 @@
         <p id="majorOutput"></p>
         <p id="yearOutput"></p>
         <p id="skillsOutput"></p>
-
-        <ul id="selectedSkills"></ul>
-
+        <p id="selectedSkills" style="display:none;"></p>
     </div>
     <div>
         <h3>Teammate Suggestions</h3>
