@@ -10,26 +10,22 @@ function checkOthers(){
 }
 
 function formSubmit() {
-    console.log(document.getElementById("other").value);
+    // console.log(document.getElementById("other").value);
     console.log("form submitted");
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var major = document.getElementById("major").value;
-    var year = document.getElementById("year").value;
     var suggestions = document.getElementById("suggestions");
     var nameOutput = document.getElementById("nameOutput");
     var emailOutput = document.getElementById("emailOutput");
     var majorOutput = document.getElementById("majorOutput");
-    var yearOutput = document.getElementById("yearOutput");
 
     nameOutput.innerHTML = "Name: " + name;
     emailOutput.innerHTML = "Email: " + email;
     majorOutput.innerHTML = "Major: " + major;
-    yearOutput.innerHTML = "Year: " + year;
     suggestions.innerHTML = "Suggestions: ";
     document.getElementById("selectedSkills").style.display="block";
     skillsOutput.innerHTML = "Skills: "+ skillsOutput;
-
 }
 
 function showForm(){
