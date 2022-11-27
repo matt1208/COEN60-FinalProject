@@ -26,7 +26,6 @@ function formSubmit() {
     suggestions.innerHTML = "Suggestions: ";
     document.getElementById("selectedSkills").style.display="block";
     skillsOutput.innerHTML = "Skills: "+ skillsOutput;
-
 }
 
 function showForm(){
