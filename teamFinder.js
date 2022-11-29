@@ -17,7 +17,7 @@ function checkOthers(){
 var userName, email, major, skills;
 function formSubmit() {
     // console.log(document.getElementById("other").value);
-    console.log("form submitted");
+    // console.log("form submitted");
     userName = document.getElementById("name").value;
     email = document.getElementById("email").value;
     major = document.getElementById("major").value;
@@ -37,23 +37,17 @@ function formSubmit() {
     skills.innerHTML =  "Skills: " + skillsOutput;
     // console.log(skillsOutput);
 
-var data = [{name: userName, email: email, major: major, skills: skills}, {name: "Claudia", email: "cbrown@scu.edu", major: "Computer Science and Engineering", skills: "python, javascript, and HTML/CSS"}];
+        var data = [{name: userName, email: email, major: major, skills: skills}, {name: "Claudia", email: "cbrown@scu.edu", major: "Computer Science and Engineering", skills: "python, javascript, and HTML/CSS"}];
 
-var content = "";
+        var content = "";
 
-$.each(data, function(i){
+        $.each(data, function(i){
 
-    content += `Name : ${data[i].name} Email: ${data[i].email} Major: ${data[i].major}  Skills:  ${data[i].skills}<br/>`;
+            content += `Name : ${data[i].name} Email: ${data[i].email} Major: ${data[i].major}  Skills:  ${data[i].skills}<br/>`;
 
-});
+        });
 
-$('#info').html(content);
-
-
-
-
-
-
+        $('#info').html(content);
 }
 
 function showForm(){
@@ -61,6 +55,7 @@ function showForm(){
     document.getElementById("formButton").style.display = "none";
 }
 
+// Test for Old Idea
 // function addSkill(skill){
 
 //     if(document.getElementById(skill).checked){
@@ -81,10 +76,6 @@ function showForm(){
     
 
 // }
-
-
-
-
 // var name1 =  prompt('Name: ');
 // var Email =  prompt('Email: ');
 // var Major =  prompt('Major: ');
