@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .connectBTN{
+            background-color: #9E1B32;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #popup{
+            
+        }
+        .okBTN{
+
+        }
+    </style>
 </head>
 
 <body>
@@ -106,7 +126,15 @@
                 </div>
                 <h3>Skills and Interests:</h3>
                 <p id="skills">Building, coding, blah blah</p>
-                <button onclick="connect()">Connect</button>
+                <div>
+                    <button type="submit" class="connectBTN">Connect</button>
+                    <div id="popup">
+                        <!-- show the users email -->
+                        <p id="email">email@email.com</p>
+                        <button id="okBTN">OK</button>
+                    </div>
+                </div>
+                
             </div>
 
         </div>
