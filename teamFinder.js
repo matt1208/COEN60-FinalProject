@@ -19,13 +19,14 @@ function formSubmit() {
     var nameOutput = document.getElementById("nameOutput");
     var emailOutput = document.getElementById("emailOutput");
     var majorOutput = document.getElementById("majorOutput");
-
+    var skills = document.getElementById("skillsOutput");
     nameOutput.innerHTML = "Name: " + name;
     emailOutput.innerHTML = "Email: " + email;
     majorOutput.innerHTML = "Major: " + major;
     suggestions.innerHTML = "Suggestions: ";
-    document.getElementById("selectedSkills").style.display="block";
-    skillsOutput.innerHTML = "Skills: "+ skillsOutput;
+    // document.getElementById("selectedSkills").style.display = "block";
+    skills.innerHTML =  "Skills: " + skillsOutput;
+    // console.log(skillsOutput);
 }
 
 function showForm(){
@@ -34,7 +35,6 @@ function showForm(){
 }
 
 function addSkill(skill){
-    
 
     if(document.getElementById(skill).checked){
         skillsOutput += skill + ", ";
@@ -42,13 +42,13 @@ function addSkill(skill){
     else{
         skillsOutput = skillsOutput.replace(skill + ", ", "");
     }
-    //only show the skills if there are any
-    if(skillsOutput.innerHTML == "Skills: "){
-        document.getElementById("selectedSkills").style.display="none";
-    }
-    else{
-        document.getElementById("selectedSkills").style.display="block";
-    }
+    // //only show the skills if there are any
+    // if(skillsOutput.innerHTML == "Skills: "){
+    //     document.getElementById("selectedSkills").style.display="none";
+    // }
+    // else{
+    //     document.getElementById("selectedSkills").style.display="block";
+    // }
 
     //only update innerHTML when the form is submitted
     

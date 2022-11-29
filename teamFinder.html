@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Find Teammates</title>
     <meta name="viewport" content="width=device-width">
@@ -11,11 +11,11 @@
     <div class="header">
         <div class="container">
             <h1>Find Team Members</h1>
-            <a href="teamFinder.html">
-                <button class="primaryBtn">Find a Team</button>
+            <a href="teamFinder.html" class="primaryBtn" style="margin-right: 10px; ">
+                Find a Team
             </a>
-            <a href="">
-                <button class="secondaryBtn">Industry Projects</button>
+            <a href="" class="secondaryBtn">
+                Industry Projects
             </a>
         </div>
     </div>
@@ -24,7 +24,7 @@
 
     <div class="container">
 
-        <button class="primaryBtn" id="formButton" onclick="showForm()">Find Teammates</button>
+        <!-- <button class="primaryBtn" id="formButton" onclick="showForm()">Find Teammates</button> -->
 
         <br><br>
 
@@ -42,11 +42,11 @@
             </div>
             <!--multiple selection drop down menu to select skills-->
                 <div>
-                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="web" onchange="addSkill(id)"/>
+                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="web Development" onchange="addSkill(id)"/>
                     <label for="web">Web Development</label>
                 </div>
                 <div>
-                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="software" onchange="addSkill(id)"/>
+                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="software Development" onchange="addSkill(id)"/>
                     <label for="software">Software Development</label>
                 </div>
                 <div>
@@ -58,11 +58,11 @@
                     <label for="circuits">Circuits</label>
                 </div>
                 <div>
-                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="civil" onchange="addSkill(id)"/>
+                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="civil engineering" onchange="addSkill(id)"/>
                     <label for="civil">Civil Engineering</label>
                 </div>
                 <div>
-                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="design" onchange="addSkill(id)"/>
+                    <input style="width: 30px; height: 20px; background: red;" type="checkbox" id="design/art" onchange="addSkill(id)"/>
                     <label for="design">Design/Art</label>
                 </div>
                 <div>
@@ -91,7 +91,7 @@
             <p id="emailOutput"></p>
             <p id="majorOutput"></p>
             <p id="skillsOutput"></p>
-            <p id="selectedSkills" style="display:none;"></p>
+            <p id="selectedSkills"></p>
         </div>
         
         <div>
