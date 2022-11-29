@@ -1,4 +1,11 @@
 var skillsOutput = document.getElementById("selectedSkills");
+var popup = document.getElementById("popup");
+function openPopup(){
+    
+}
+function closePopup(){
+
+}
 
 function checkOthers(){
     if(document.getElementById("other").checked){
