@@ -95,8 +95,7 @@
         position: relative;
         width: 387px;
         height: 351px;
-        left: 24px;
-        top: -80px;
+        
         background: #DFDBD3;
         border-radius: 5px;
       }
@@ -132,44 +131,27 @@
 
 
 
+
 <div id="industry" style="display:none">
+
+<div id="google">
     <div id="Industry_display">
 
       <?php include 'vars.php';
-          echo '<p style="color:blue;">' . $companyName[0] . '</p>';
+                  echo '<p style="position: relative; left: 5px; font-size: 14px;">Company: <br>  ' . $companyName[0] . "<br> <br> Description: <br> </p>"; 
+                  echo '<p style="position: relative; left: 5px; font-size: 14px;">' . $CompanyDescription . "<br> <br> Project type: <br> </p>";
+                  echo '<p style="position: relative; left: 5px; font-size: 14px;">' . $projectType . "</p>";
       ?>
+      
+      <input style="background:#a01c34;color:white; position: relative; left: 5px;" type="button" onclick="remove_google()" value="Claim"> </input>
 
     </div>
-
-    <div id="Industry_display" style="position: relative; left: 500px; top: -430px;"> 
-    <?php include 'vars.php';
-          echo $companyName[1];
-      ?>
-
-    </div>
-
-    <div id="Industry_display" style="position: relative; left: 980px; top: -780px;">
-    <?php include 'vars.php';
-          echo $companyName[2];
-      ?>
-    </div>
-    <div id="Industry_display" style="position: relative; left: 500px; top: -730px;">
-    <?php include 'vars.php';
-          echo $companyName[3];
-      ?>
-    </div>
-    <div id="Industry_display" style="position: relative; left: 980px; top: -1080px;">
-    <?php include 'vars.php';
-          echo $companyName[4];
-      ?>
-    </div>
-    <div id="Industry_display" style="position: relative; left: 24px; top: -1430px;">
-    <?php include 'vars.php';
-          echo $companyName[5];
-      ?>
-      </div>
-
 </div>
+
+
+
+
+
 
 
 
@@ -184,9 +166,27 @@
     function remove_sign() {
 				var gfg_down = document.getElementById("SigninO");
 				gfg_down.remove();
-                var T = document.getElementById("industry");
-                T.style.display = "block";  // <-- Set it to block
+        var T = document.getElementById("industry");
+        T.style.display = "block";  // <-- Set it to block
     }
+
+    function remove_google(){
+      var delete_google = document.getElementById("google");
+      delete_google.remove();
+
+    }
+    function remove_cisco(){
+      var delete_cisco = document.getElementById("cisco");
+      delete_cisco.remove();
+
+    }
+
+    function remove_nasa(){
+      var delete_nasa = document.getElementById("NASA");
+      delete_nasa.remove();
+
+    }
+
 
         
 
