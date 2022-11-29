@@ -18,7 +18,7 @@
             margin: 4px 2px;
             cursor: pointer;
         }
-        #popup{
+        .popup{
             width: 400px;
             background: #fff;
             border-radius: 3px;
@@ -33,13 +33,14 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             visibility: hidden;
             transition: transform 0.4s, top 0.4s;
+            border: 1px solid black ;
         }
         .open-popup{
             visibility: visible;
             top: 50%; 
             transform: translate(-50%, -50%) scale(1);
         }
-        .okBTN{
+        #okBTN{
             width: 100%;
             margin-top: 50px;
             padding: 10px 0;
@@ -156,7 +157,7 @@
                 <p id="skills">Building, coding, blah blah</p>
                 <div>
                     <button type="submit" class="connectBTN" onclick="openPopup() ">Connect</button>
-                    <div id="popup">
+                    <div class="popup" id="popup">
                         <!-- show the users email -->
                         <p id="email">email@email.com</p>
                         <button id="okBTN" onclick="closePopup()">OK</button>
