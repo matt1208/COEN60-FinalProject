@@ -8,6 +8,42 @@
     <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .popup{
+            width: 400px;
+            background: #fff;
+            border-radius: 3px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.1);
+            text-align: center;
+            padding: 0 20px 30px;
+            color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
+            border: 1px solid black ;
+        }
+        .open-popup{
+            visibility: visible;
+            top: 100%; 
+            transform: translate(-50%, -50%) scale(1);
+        }
+        #okBTN{
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background: #9E1B32;
+            color: #fff;
+            border: 0;
+            outline: none;
+            font-size: 18px;
+            border-radius: 3px;
+            cursor: pointer;
+
+        }
+    </style>
 </head>
 
 <body>
