@@ -173,3 +173,53 @@ body {
     padding-left: 10px;
     color: white; 
 }
+
+.boxHeader p{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+#userlogin {
+    background: #546575;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.46);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 400px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    padding-bottom: 40px;
+}
+
+#login input{
+    background: rgba(217, 217, 217, 0.53);
+    border-radius: 10px;
+    border: none;
+    width: 250px;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    padding-left: 10px;
+}
+
+#login input:focus {
+    outline: none;
+}
+
+#login input:valid{
+    background: rgba(217, 217, 217, 0.53);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+#login input::placeholder{
+    padding-left: 10px;
+    color: white; 
+}
